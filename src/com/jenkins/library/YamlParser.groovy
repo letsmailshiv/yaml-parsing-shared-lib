@@ -4,7 +4,7 @@ package com.jenkins.library
 def findAndReplace(Map config) {
     Map yamlConfig = [:]
 
-     yamlConfig.configPath = config.configPath ? config.path : "${pwd()}"
+     yamlConfig.configPath = config.configPath ? config.path : "${pwd()}/"
      yamlConfig.fileName = config.fileName ? config.fileName : "values.yaml"
      yamlConfig.keyName = config.keyName
      yamlConfig.keyValue = config.keyValue
