@@ -1,7 +1,7 @@
 
 //import com.jenkins.library.YamlParser
 
-def call(Map config) {
+def call(Map config=[:]) {
     Map yamlConfig = [:]
     String yamlConfig.configPath = config.configPath ? config.path : "${pwd()}"
     String yamlConfig.fileName = config.fileName ? config.fileName : "values.yaml"
