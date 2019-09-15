@@ -1,0 +1,31 @@
+library identifier: 'nodejs-bdd-backend-api_nix@master', retriever: modernSCM([$class: 'GitSCMSource',
+	remote: 'https://github.com/letsmailshiv/yaml-parsing-shared-lib.git'])
+
+pipeline {
+    agent any
+    stages {
+        stage('Parse Json') {
+            steps {
+                script {
+
+                yamlReplace(
+                    fileName: "Jenkins.yaml",
+                    keyName: "config.sample[+].yaml",
+                    keyValue: "credentailsUpdated"
+                )
+                yamlReplace(
+                    fileName: "Jenkins.yaml",
+                    keyName: "config.sample[].yaml",
+                    keyValue: "credentailsUpdated2"
+                )
+                yamlReplace(
+                    fileName: "Jenkins.yaml",
+                    keyName: "config.build.message",
+                    keyValue: "buildwasSuccessful"
+                )
+
+                }
+            }
+        }
+    }
+}
