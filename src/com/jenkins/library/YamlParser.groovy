@@ -1,7 +1,7 @@
 package com.jenkins.library
 
 
-def YamlParser(Map config) {
+def findAndReplace(Map config) {
     Map yamlConfig = [:]
 
      yamlConfig.configPath = config.configPath ? config.path : "${pwd()}"
