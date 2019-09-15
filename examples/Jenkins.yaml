@@ -1,13 +1,6 @@
 config:
-    vault:
-        bluemix:
+    sample:
+        yaml:
         - credentials
-        - apps/devops/shared/bluemix
-        github:
-        - creds_id
-        - apps/devops/shared/git
-
     build:
         message: 'in build'
-    test:
-        message: 'in test'
