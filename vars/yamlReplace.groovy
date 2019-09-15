@@ -3,10 +3,10 @@
 
 def call(Map config=[:]) {
     Map yamlConfig = [:]
-    String yamlConfig.configPath = config.configPath ? config.path : "${pwd()}"
-    String yamlConfig.fileName = config.fileName ? config.fileName : "values.yaml"
-    String yamlConfig.keyName = config.keyName
-    String yamlConfig.keyValue = config.keyValue
+     yamlConfig.configPath = config.configPath ? config.path : "${pwd()}"
+     yamlConfig.fileName = config.fileName ? config.fileName : "values.yaml"
+     yamlConfig.keyName = config.keyName
+     yamlConfig.keyValue = config.keyValue
 
     //def yaml = new YamlParser();
     //yaml.parser(yamlConfig);
