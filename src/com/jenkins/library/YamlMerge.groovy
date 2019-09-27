@@ -7,6 +7,6 @@ def merge(Map config) {
     fileB = config.fileB ? config.fileB : "source.yaml"
     mergedFile = config.mergedFile  ? config.fileB : "merged.yaml"
     def tempfile = "temp-" + UUID.randomUUID().toString() + ".txt"
-    sh "yq m ${sourceFile} ${destFile} >${tempfile}"
+    sh "yq m ${fileA} ${fileB} >${tempfile}"
     sh "cp -r ${tempfile} ${mergedFile} && rm -rf ${tempfile}"
 }
