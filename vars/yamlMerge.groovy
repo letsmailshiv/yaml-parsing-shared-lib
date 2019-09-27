@@ -1,5 +1,5 @@
 
-import com.jenkins.library.YamlParser
+import com.jenkins.library.YamlMerge
 
 def call(Map config=[:]) {
 
